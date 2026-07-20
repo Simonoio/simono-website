@@ -1,16 +1,78 @@
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const copyEmailButton=document.getElementById('copyEmail');
-if(copyEmailButton){copyEmailButton.addEventListener('click',async()=>{const label=document.getElementById('copyLabel');try{await navigator.clipboard.writeText('simon@simono.io');if(label)label.textContent='Copied ✓'}catch{location.href='mailto:simon@simono.io'}if(label)setTimeout(()=>label.textContent='Copy email',1800)})}
-const mobileMenuButton=document.querySelector('.menu');
-const mobileNav=document.querySelector('.nav-links');
-function closeMobileMenu(){if(!mobileMenuButton||!mobileNav)return;mobileNav.classList.remove('is-open');mobileMenuButton.setAttribute('aria-expanded','false');mobileMenuButton.setAttribute('aria-label','Open menu');mobileMenuButton.textContent='☰'}
-if(mobileMenuButton&&mobileNav){mobileMenuButton.addEventListener('click',()=>{const open=mobileNav.classList.toggle('is-open');mobileMenuButton.setAttribute('aria-expanded',String(open));mobileMenuButton.setAttribute('aria-label',open?'Close menu':'Open menu');mobileMenuButton.textContent=open?'×':'☰'});mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMobileMenu));document.addEventListener('click',event=>{if(mobileNav.classList.contains('is-open')&&!nav.contains(event.target))closeMobileMenu()});document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMobileMenu()});addEventListener('resize',()=>{if(innerWidth>1050)closeMobileMenu()},{passive:true})}
-const bookingCopy={default:{title:'Build your outbound system',subtitle:'Book a focused 30-minute conversation to review your goals, identify the highest-impact opportunities and determine whether Simono is the right partner.'},build:{title:"Let's build your outbound system.",subtitle:"We'll review your market, positioning, ICP and outreach strategy to design an outbound system that creates more predictable conversations."},scale:{title:"Let's scale what's already working.",subtitle:"We'll analyse your current outbound engine, identify bottlenecks and discuss how Simono can help you generate more qualified conversations."}};
-const overlay=document.getElementById('bookingOverlay');const title=document.getElementById('bookingTitle');const subtitle=document.getElementById('bookingSubtitle');let calPromise;
-function loadCal(){if(calPromise)return calPromise;calPromise=new Promise((resolve,reject)=>{(function(C,A,L){let p=(a,ar)=>a.q.push(ar),d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal,ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];const s=d.createElement('script');s.src=A;s.async=true;s.onload=resolve;s.onerror=reject;d.head.appendChild(s);cal.loaded=true}if(ar[0]===L){const api=function(){p(api,arguments)},namespace=ar[1];api.q=api.q||[];typeof namespace==='string'?(cal.ns[namespace]=api)&&p(api,ar):p(cal,ar);return}p(cal,ar)}})(window,'https://app.cal.com/embed/embed.js','init');Cal('init','simonoBooking',{origin:'https://cal.com'});Cal.ns.simonoBooking('inline',{elementOrSelector:'#simono-cal-inline',calLink:'simon-lecat/build-your-outbound-system',config:{layout:'month_view',theme:'dark'}});Cal.ns.simonoBooking('ui',{theme:'dark',styles:{branding:{brandColor:'#00B5E2'}},hideEventTypeDetails:false,layout:'month_view'});setTimeout(resolve,0)});return calPromise}
-function openBooking(event){if(event)event.preventDefault();const type=event?.currentTarget?.dataset.bookingType||'default',copy=bookingCopy[type]||bookingCopy.default;title.textContent=copy.title;subtitle.textContent=copy.subtitle;overlay.style.display='block';requestAnimationFrame(()=>overlay.classList.add('is-open'));overlay.setAttribute('aria-hidden','false');document.body.classList.add('booking-open');history.replaceState(null,'','#booking');overlay.scrollTop=0;loadCal().catch(()=>{document.getElementById('simono-cal-inline').innerHTML='<p style="padding:32px;text-align:center">The booking calendar could not load. Please email simon@simono.io.</p>'})}
-function closeBooking(){overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('booking-open');setTimeout(()=>overlay.style.display='none',240);history.replaceState(null,'',location.pathname+location.search)}
-document.querySelectorAll('.open-booking').forEach(el=>el.addEventListener('click',openBooking));document.getElementById('bookingBack')?.addEventListener('click',closeBooking);document.getElementById('bookingClose')?.addEventListener('click',closeBooking);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay?.classList.contains('is-open'))closeBooking()});if(location.hash==='#booking')openBooking();
+(() => {
+  'use strict';
+
+  const nav = document.getElementById('nav');
+  const menu = document.querySelector('.menu');
+  const navLinks = document.getElementById('primary-navigation');
+  const overlay = document.getElementById('bookingOverlay');
+  const close = document.getElementById('bookingClose');
+  const back = document.getElementById('bookingBack');
+  const calContainer = document.getElementById('simono-cal-inline');
+  let calLoaded = false;
+
+  const updateNav = () => nav?.classList.toggle('scrolled', window.scrollY > 12);
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+
+  menu?.addEventListener('click', () => {
+    const open = navLinks?.classList.toggle('is-open') ?? false;
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? '×' : '☰';
+  });
+
+  navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    navLinks.classList.remove('is-open');
+    menu?.setAttribute('aria-expanded', 'false');
+    if (menu) menu.textContent = '☰';
+  }));
+
+  const revealObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 })
+    : null;
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    if (revealObserver) revealObserver.observe(el);
+    else el.classList.add('visible');
+  });
+
+  const loadCal = () => {
+    if (calLoaded || !calContainer) return;
+    calLoaded = true;
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://cal.com/simon-lecat/build-your-outbound-system?embed=true&theme=dark';
+    iframe.title = 'Book a strategy call with Simon';
+    iframe.loading = 'lazy';
+    iframe.style.cssText = 'width:100%;min-height:700px;border:0;background:#151515;';
+    iframe.allow = 'camera; microphone; fullscreen; payment';
+    calContainer.appendChild(iframe);
+  };
+
+  const openBooking = (event) => {
+    event?.preventDefault();
+    if (!overlay) return;
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('booking-open');
+    loadCal();
+    close?.focus();
+  };
+
+  const closeBooking = () => {
+    overlay?.classList.remove('is-open');
+    overlay?.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('booking-open');
+  };
+
+  document.querySelectorAll('.open-booking').forEach((el) => el.addEventListener('click', openBooking));
+  close?.addEventListener('click', closeBooking);
+  back?.addEventListener('click', closeBooking);
+  overlay?.addEventListener('click', (event) => { if (event.target === overlay) closeBooking(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeBooking(); });
+})();
