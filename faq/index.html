@@ -1,30 +1,663 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frequently Asked Questions | Simono</title><meta name="description" content="Answers about Simono's outbound systems, launch timelines, results, ideal clients and engagement model."><link rel="canonical" href="https://simono.io/faq/"><meta property="og:type" content="website"><meta property="og:title" content="Frequently Asked Questions | Simono"><meta property="og:description" content="Clear answers about working with Simono and building a predictable outbound system."><meta property="og:url" content="https://simono.io/faq/"><link rel="icon" href="../favicon.png"><style>
-:root{--bg:#090909;--surface:#111;--text:#f7f7f4;--muted:#9b9b96;--muted-2:#6c6c67;--accent:#00B5E2;--line:rgba(255,255,255,.09);--line-strong:rgba(255,255,255,.15);--max:1240px;--ease:cubic-bezier(.22,.61,.36,1)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:var(--bg)}body{min-height:100%;overflow-x:hidden;color:var(--text);background:radial-gradient(circle at 50% -10%,rgba(0,181,226,.09),transparent 28%),linear-gradient(180deg,#0a0a0a,#080808);font-family:"Geist",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 48px));margin:auto}
-.nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(9,9,9,.84);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(16px)}.nav-inner{min-height:72px;display:grid;grid-template-columns:220px minmax(0,1fr) 290px;align-items:center;gap:24px}.brand{display:inline-flex;align-items:center;gap:8px;width:max-content}.simono-v3-mark{display:block;width:auto;height:24px;object-fit:contain}.simono-v3-wordmark{font-size:21px;font-weight:500;letter-spacing:-.045em}.simono-v3-o{color:var(--accent)}.nav-links{display:flex;justify-content:center;gap:32px;color:var(--muted);font-size:.88rem}.nav-links a:hover{color:var(--text)}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid rgba(0,181,226,.38);border-radius:16px;background:rgba(0,181,226,.09);font-size:.88rem;transition:.25s var(--ease)}.button:hover{transform:translateY(-2px);background:rgba(0,181,226,.15);border-color:var(--accent)}.nav-cta{justify-self:end;width:270px}.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--text)}
-.faq-hero{min-height:610px;padding:164px 0 90px;display:flex;align-items:center;text-align:center}.faq-hero .container{display:flex;flex-direction:column;align-items:center}.eyebrow{color:var(--accent);font:500 .68rem "Geist Mono",monospace;letter-spacing:.12em;text-transform:uppercase}.faq-title{max-width:1000px;margin:26px auto 0;text-align:center;font-size:clamp(3.6rem,7vw,7.2rem);font-weight:600;letter-spacing:-.068em;line-height:.94}.faq-title span{display:block;color:#8f8f8a}.intro{max-width:760px;margin:30px auto 0;color:var(--muted);font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.7;text-align:center}
-.faq-section{padding:40px 0 140px}.faq-shell{max-width:980px;margin:0 auto}.faq-category{display:grid;grid-template-columns:190px 1fr;gap:54px;padding:54px 0;border-top:1px solid var(--line)}.faq-category:last-child{border-bottom:1px solid var(--line)}.category-label{color:var(--accent);font:500 .68rem "Geist Mono",monospace;letter-spacing:.11em;text-transform:uppercase}.faq-list{border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:500}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";color:var(--accent);font-size:1.6rem;font-weight:300;transition:transform .25s}.faq-item[open] summary::after{transform:rotate(45deg)}.faq-answer{max-width:760px;padding:0 44px 28px 0;color:var(--muted);font-size:1rem;line-height:1.75}.contact-wrap{padding:130px 0 145px;text-align:center}.contact-title{max-width:900px;margin:auto;font-size:clamp(3rem,5.7vw,5.8rem);font-weight:600;letter-spacing:-.058em;line-height:.98}.contact-title span{display:block;color:var(--muted)}.contact-wrap .button{margin-top:34px}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R8M4SS5NS1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-/* Shared production footer */
-.footer,.site-footer{padding:0!important;border-top:1px solid rgba(255,255,255,.09)!important;background:linear-gradient(180deg,rgba(255,255,255,.012),rgba(255,255,255,.004))!important}
-.footer-v4{padding:64px 0 28px!important}
-.footer-v4-main{display:grid!important;grid-template-columns:1.2fr .8fr!important;gap:80px!important;align-items:start!important;padding-bottom:48px!important}
-.footer-v4-brand p{max-width:420px!important;margin-top:18px!important;color:#9b9b96!important;font-size:.95rem!important;line-height:1.65!important}
-.footer-v4-links{display:grid!important;grid-template-columns:repeat(2,max-content)!important;justify-content:end!important;gap:48px!important}
-.footer-v4-links div{display:grid!important;gap:6px!important}
-.footer-v4-links span{margin-bottom:4px!important;color:#6c6c67!important;font:500 .66rem "Geist Mono",monospace!important;letter-spacing:.11em!important;text-transform:uppercase!important}
-.footer-v4-links a{color:#9b9b96!important;font-size:.9rem!important;line-height:1.35!important;text-decoration:none!important;transition:.2s ease!important}
-.footer-v4-links a:hover{color:#f7f7f4!important}
-.footer-v4-bottom{display:flex!important;justify-content:space-between!important;gap:24px!important;padding-top:24px!important;border-top:1px solid rgba(255,255,255,.09)!important;color:#6c6c67!important;font-size:.78rem!important}
-.footer-v4 .brand{display:inline-flex!important;align-items:center!important;gap:7px!important;text-decoration:none!important}
-.footer-v4 .simono-v3-wordmark{font-family:"Geist",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:19px!important;font-weight:500!important;letter-spacing:-.045em!important;color:#f7f7f4!important}
-.footer-v4 .simono-v3-o{color:#00B5E2!important}
-@media(max-width:760px){.footer-v4-main{grid-template-columns:1fr!important;gap:42px!important}.footer-v4-links{justify-content:start!important;gap:28px!important}.footer-v4-bottom{flex-direction:column!important}}
+      gtag("config", "G-R8M4SS5NS1");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Frequently Asked Questions | Simono</title>
+    <meta
+      name="description"
+      content="Answers about Simono's outbound systems, launch timelines, results, ideal clients and engagement model."
+    />
+    <link rel="canonical" href="https://simono.io/faq/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Frequently Asked Questions | Simono" />
+    <meta
+      property="og:description"
+      content="Clear answers about working with Simono and building a predictable outbound system."
+    />
+    <meta property="og:url" content="https://simono.io/faq/" />
+    <link rel="icon" href="../favicon.png" />
+    <style>
+      :root {
+        --bg: #090909;
+        --surface: #111;
+        --text: #f7f7f4;
+        --muted: #9b9b96;
+        --muted-2: #6c6c67;
+        --accent: #00b5e2;
+        --line: rgba(255, 255, 255, 0.09);
+        --line-strong: rgba(255, 255, 255, 0.15);
+        --max: 1240px;
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        background: var(--bg);
+      }
+      body {
+        min-height: 100%;
+        overflow-x: hidden;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 50% -10%,
+            rgba(0, 181, 226, 0.09),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #0a0a0a, #080808);
+        font-family:
+          "Geist",
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        width: min(var(--max), calc(100% - 48px));
+        margin: auto;
+      }
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        background: rgba(9, 9, 9, 0.84);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(16px);
+      }
+      .nav-inner {
+        min-height: 72px;
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr) 290px;
+        align-items: center;
+        gap: 24px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: max-content;
+      }
+      .simono-v3-mark {
+        display: block;
+        width: auto;
+        height: 24px;
+        object-fit: contain;
+      }
+      .simono-v3-wordmark {
+        font-size: 21px;
+        font-weight: 500;
+        letter-spacing: -0.045em;
+      }
+      .simono-v3-o {
+        color: var(--accent);
+      }
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+      .nav-links a:hover {
+        color: var(--text);
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid rgba(0, 181, 226, 0.38);
+        border-radius: 16px;
+        background: rgba(0, 181, 226, 0.09);
+        font-size: 0.88rem;
+        transition: 0.25s var(--ease);
+      }
+      .button:hover {
+        transform: translateY(-2px);
+        background: rgba(0, 181, 226, 0.15);
+        border-color: var(--accent);
+      }
+      .nav-cta {
+        justify-self: end;
+        width: 270px;
+      }
+      .menu {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: var(--surface);
+        color: var(--text);
+      }
+      .faq-hero {
+        min-height: 610px;
+        padding: 164px 0 90px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      .faq-hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font:
+          500 0.68rem "Geist Mono",
+          monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .faq-title {
+        max-width: 1000px;
+        margin: 26px auto 0;
+        text-align: center;
+        font-size: clamp(3.6rem, 7vw, 7.2rem);
+        font-weight: 600;
+        letter-spacing: -0.068em;
+        line-height: 0.94;
+      }
+      .faq-title span {
+        display: block;
+        color: #8f8f8a;
+      }
+      .intro {
+        max-width: 760px;
+        margin: 30px auto 0;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+        line-height: 1.7;
+        text-align: center;
+      }
+      .faq-section {
+        padding: 40px 0 140px;
+      }
+      .faq-shell {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .faq-category {
+        display: grid;
+        grid-template-columns: 190px 1fr;
+        gap: 54px;
+        padding: 54px 0;
+        border-top: 1px solid var(--line);
+      }
+      .faq-category:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .category-label {
+        color: var(--accent);
+        font:
+          500 0.68rem "Geist Mono",
+          monospace;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+      .faq-list {
+        border-top: 1px solid var(--line);
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq-item summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 26px 0;
+        font-size: clamp(1.12rem, 1.7vw, 1.35rem);
+        font-weight: 500;
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item summary::after {
+        content: "+";
+        color: var(--accent);
+        font-size: 1.6rem;
+        font-weight: 300;
+        transition: transform 0.25s;
+      }
+      .faq-item[open] summary::after {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-width: 760px;
+        padding: 0 44px 28px 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+      .contact-wrap {
+        padding: 130px 0 145px;
+        text-align: center;
+      }
+      .contact-title {
+        max-width: 900px;
+        margin: auto;
+        font-size: clamp(3rem, 5.7vw, 5.8rem);
+        font-weight: 600;
+        letter-spacing: -0.058em;
+        line-height: 0.98;
+      }
+      .contact-title span {
+        display: block;
+        color: var(--muted);
+      }
+      .contact-wrap .button {
+        margin-top: 34px;
+      }
 
-@media(max-width:1050px){.nav-inner{display:flex;justify-content:space-between}.nav-links,.nav-cta{display:none}.menu{display:grid;place-items:center}.faq-category{grid-template-columns:1fr;gap:22px}}
-@media(max-width:760px){.container{width:min(var(--max),calc(100% - 28px))}.faq-hero{min-height:520px;padding:125px 0 72px}.faq-title{font-size:clamp(3.1rem,14vw,5rem)}.faq-section{padding-bottom:100px}.faq-category{padding:40px 0}.faq-item summary{padding:22px 0}.faq-answer{padding-right:8px}.contact-wrap{padding:100px 0}}
+      /* Shared production footer */
+      .footer,
+      .site-footer {
+        padding: 0 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.012),
+          rgba(255, 255, 255, 0.004)
+        ) !important;
+      }
+      .footer-v4 {
+        padding: 64px 0 28px !important;
+      }
+      .footer-v4-main {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        gap: 80px !important;
+        align-items: start !important;
+        padding-bottom: 48px !important;
+      }
+      .footer-v4-brand p {
+        max-width: 420px !important;
+        margin-top: 18px !important;
+        color: #9b9b96 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.65 !important;
+      }
+      .footer-v4-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, max-content) !important;
+        justify-content: end !important;
+        gap: 48px !important;
+      }
+      .footer-v4-links div {
+        display: grid !important;
+        gap: 6px !important;
+      }
+      .footer-v4-links span {
+        margin-bottom: 4px !important;
+        color: #6c6c67 !important;
+        font:
+          500 0.66rem "Geist Mono",
+          monospace !important;
+        letter-spacing: 0.11em !important;
+        text-transform: uppercase !important;
+      }
+      .footer-v4-links a {
+        color: #9b9b96 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.35 !important;
+        text-decoration: none !important;
+        transition: 0.2s ease !important;
+      }
+      .footer-v4-links a:hover {
+        color: #f7f7f4 !important;
+      }
+      .footer-v4-bottom {
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 24px !important;
+        padding-top: 24px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
+        color: #6c6c67 !important;
+        font-size: 0.78rem !important;
+      }
+      .footer-v4 .brand {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 7px !important;
+        text-decoration: none !important;
+      }
+      .footer-v4 .simono-v3-wordmark {
+        font-family:
+          "Geist",
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif !important;
+        font-size: 19px !important;
+        font-weight: 500 !important;
+        letter-spacing: -0.045em !important;
+        color: #f7f7f4 !important;
+      }
+      .footer-v4 .simono-v3-o {
+        color: #00b5e2 !important;
+      }
+      @media (max-width: 760px) {
+        .footer-v4-main {
+          grid-template-columns: 1fr !important;
+          gap: 42px !important;
+        }
+        .footer-v4-links {
+          justify-content: start !important;
+          gap: 28px !important;
+        }
+        .footer-v4-bottom {
+          flex-direction: column !important;
+        }
+      }
 
-/* Footer connect links tightened */
-.footer-v4-links > div:last-child{align-content:start!important;gap:6px!important}
-.footer-v4-links > div:last-child a{line-height:1.2!important;margin:0!important;padding:0!important}
-</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Simono actually build?","acceptedAnswer":{"@type":"Answer","text":"Simono designs and operates the complete outbound system: positioning, ICP definition, prospect data, email infrastructure, messaging, sequences, CRM workflows, qualification and reporting."}},{"@type":"Question","name":"How long does it take to launch an outbound system?","acceptedAnswer":{"@type":"Answer","text":"A typical launch takes two to four weeks, depending on the existing infrastructure, market complexity and the number of channels involved."}},{"@type":"Question","name":"When should we expect to see results?","acceptedAnswer":{"@type":"Answer","text":"Early replies and market signals can appear during the first weeks after launch. A reliable view of performance develops over several testing and optimisation cycles."}}]}</script></head><body><header class="nav"><div class="container nav-inner"><a aria-label="Simono home" class="brand" href="../index.html"><img alt="" aria-hidden="true" class="simono-v3-mark" src="../assets/simono-mark.png"><span class="simono-v3-wordmark">Simon<span class="simono-v3-o">o</span></span></a><nav class="nav-links"><a href="../index.html#diagnosis">Diagnosis</a><a href="../index.html#method">Methodology</a><a href="../index.html#offer">Solutions</a><a href="../index.html#why">Why Simono</a><a href="../insights/index.html">Insights</a><a href="../index.html#contact">Contact</a></nav><a class="button nav-cta" href="https://cal.com/simon-lecat/build-your-outbound-system">Build your outbound system</a><button class="menu" aria-label="Open menu">☰</button></div></header><main><section class="faq-hero"><div class="container"><span class="eyebrow">Frequently Asked Questions</span><h1 class="faq-title">Questions before<span>building the system.</span></h1><p class="intro">Clear answers on how Simono works, what the engagement includes and when outbound starts producing useful signals.</p></div></section><section class="faq-section"><div class="container faq-shell"><section class="faq-category"><div class="category-label">The system</div><div class="faq-list"><details class="faq-item"><summary>What does Simono actually build?</summary><div class="faq-answer">Simono designs and operates the complete outbound system: positioning, ICP definition, prospect data, email infrastructure, messaging, sequences, CRM workflows, qualification and reporting. The objective is not simply to send more outreach, but to create a repeatable source of relevant commercial conversations.</div></details><details class="faq-item"><summary>Do you work as an outsourced SDR team?</summary><div class="faq-answer">Not exactly. Simono is a systems partner. Outreach execution can be managed as part of the engagement, but the core value is the infrastructure, process and feedback loop that make outbound repeatable and measurable rather than dependent on one person.</div></details></div></section><section class="faq-category"><div class="category-label">Timeline & results</div><div class="faq-list"><details class="faq-item"><summary>How long does it take to launch an outbound system?</summary><div class="faq-answer">A typical launch takes two to four weeks, depending on the existing infrastructure, the complexity of the market and the number of channels involved. This setup period protects deliverability and ensures targeting and messaging are properly validated before volume increases.</div></details><details class="faq-item"><summary>When should we expect to see results?</summary><div class="faq-answer">Early replies and market signals can appear during the first weeks after launch. A reliable view of performance normally develops over several cycles of testing and optimisation. Simono focuses on qualified conversations and system improvement rather than short-term activity metrics.</div></details></div></section><section class="faq-category"><div class="category-label">Working together</div><div class="faq-list"><details class="faq-item"><summary>Which companies are the best fit for Simono?</summary><div class="faq-answer">Simono is designed for B2B companies selling high-value services or software, particularly recruitment firms, IT consultancies, SaaS companies and specialist service businesses that need a more predictable way to reach decision-makers.</div></details><details class="faq-item"><summary>What do you need from our team?</summary><div class="faq-answer">The most important inputs are access to commercial context, a clear understanding of the offer and timely feedback on replies and meetings. Simono handles the system and execution, while your team provides the expertise needed to sharpen targeting and qualification.</div></details></div></section></div></section><section class="contact-wrap"><div class="container"><h2 class="contact-title">Still have a question?<span>Let’s discuss your outbound system.</span></h2><a class="button" href="https://cal.com/simon-lecat/build-your-outbound-system">Build your outbound system</a></div></section></main><footer class="site-footer"><div class="container footer-v4"><div class="footer-v4-main"><div class="footer-v4-brand"><a aria-label="Simono home" class="brand" href="../index.html"><span class="simono-v3-wordmark">Simon<span class="simono-v3-o">o</span></span></a><p>Outbound systems built to create more predictable B2B conversations.</p></div><div class="footer-v4-links"><div><span>Explore</span><a href="../index.html#diagnosis">Diagnosis</a><a href="../index.html#method">Methodology</a><a href="../index.html#offer">Solutions</a><a href="../index.html#why">Why Simono</a><a href="../insights/index.html">Insights</a><a href="../faq/index.html">FAQ</a></div><div><span>Connect</span><a href="mailto:simon@simono.io?subject=Outbound%20Inquiry">Email</a><a href="https://www.linkedin.com/in/simon-lecat/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://cal.com/simon-lecat/build-your-outbound-system" rel="noopener noreferrer" target="_blank">Book a call</a></div></div></div><div class="footer-v4-bottom"><span>© 2026 Simono. All rights reserved.</span><span>Based in Australia. Built for clarity, consistency and compounding growth.</span></div></div></footer></body></html>
+      @media (max-width: 1050px) {
+        .nav-inner {
+          display: flex;
+          justify-content: space-between;
+        }
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+        .menu {
+          display: grid;
+          place-items: center;
+        }
+        .faq-category {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+      }
+      @media (max-width: 760px) {
+        .container {
+          width: min(var(--max), calc(100% - 28px));
+        }
+        .faq-hero {
+          min-height: 520px;
+          padding: 125px 0 72px;
+        }
+        .faq-title {
+          font-size: clamp(3.1rem, 14vw, 5rem);
+        }
+        .faq-section {
+          padding-bottom: 100px;
+        }
+        .faq-category {
+          padding: 40px 0;
+        }
+        .faq-item summary {
+          padding: 22px 0;
+        }
+        .faq-answer {
+          padding-right: 8px;
+        }
+        .contact-wrap {
+          padding: 100px 0;
+        }
+      }
+
+      /* Footer connect links tightened */
+      .footer-v4-links > div:last-child {
+        align-content: start !important;
+        gap: 6px !important;
+      }
+      .footer-v4-links > div:last-child a {
+        line-height: 1.2 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Simono actually build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simono designs and operates the complete outbound system: positioning, ICP definition, prospect data, email infrastructure, messaging, sequences, CRM workflows, qualification and reporting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to launch an outbound system?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A typical launch takes two to four weeks, depending on the existing infrastructure, market complexity and the number of channels involved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should we expect to see results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Early replies and market signals can appear during the first weeks after launch. A reliable view of performance develops over several testing and optimisation cycles."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a aria-label="Simono home" class="brand" href="../index.html"
+          ><img
+            alt=""
+            aria-hidden="true"
+            class="simono-v3-mark"
+            src="../assets/simono-mark.png"
+          /><span class="simono-v3-wordmark"
+            >Simon<span class="simono-v3-o">o</span></span
+          ></a
+        >
+        <nav class="nav-links">
+          <a href="../index.html#diagnosis">Diagnosis</a
+          ><a href="../index.html#method">Methodology</a
+          ><a href="../index.html#offer">Solutions</a
+          ><a href="../index.html#why">Why Simono</a
+          ><a href="../insights/index.html">Insights</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <a
+          class="button nav-cta"
+          href="https://cal.com/simon-lecat/build-your-outbound-system"
+          >Build your outbound system</a
+        ><button class="menu" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+    <main>
+      <section class="faq-hero">
+        <div class="container">
+          <span class="eyebrow">Frequently Asked Questions</span>
+          <h1 class="faq-title">
+            Questions before<span>building the system.</span>
+          </h1>
+          <p class="intro">
+            Clear answers on how Simono works, what the engagement includes and
+            when outbound starts producing useful signals.
+          </p>
+        </div>
+      </section>
+      <section class="faq-section">
+        <div class="container faq-shell">
+          <section class="faq-category">
+            <div class="category-label">The system</div>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>What does Simono actually build?</summary>
+                <div class="faq-answer">
+                  Simono designs and operates the complete outbound system:
+                  positioning, ICP definition, prospect data, email
+                  infrastructure, messaging, sequences, CRM workflows,
+                  qualification and reporting. The objective is not simply to
+                  send more outreach, but to create a repeatable source of
+                  relevant commercial conversations.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Do you work as an outsourced SDR team?</summary>
+                <div class="faq-answer">
+                  Not exactly. Simono is a systems partner. Outreach execution
+                  can be managed as part of the engagement, but the core value
+                  is the infrastructure, process and feedback loop that make
+                  outbound repeatable and measurable rather than dependent on
+                  one person.
+                </div>
+              </details>
+            </div>
+          </section>
+          <section class="faq-category">
+            <div class="category-label">Timeline & results</div>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>
+                  How long does it take to launch an outbound system?
+                </summary>
+                <div class="faq-answer">
+                  A typical launch takes two to four weeks, depending on the
+                  existing infrastructure, the complexity of the market and the
+                  number of channels involved. This setup period protects
+                  deliverability and ensures targeting and messaging are
+                  properly validated before volume increases.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>When should we expect to see results?</summary>
+                <div class="faq-answer">
+                  Early replies and market signals can appear during the first
+                  weeks after launch. A reliable view of performance normally
+                  develops over several cycles of testing and optimisation.
+                  Simono focuses on qualified conversations and system
+                  improvement rather than short-term activity metrics.
+                </div>
+              </details>
+            </div>
+          </section>
+          <section class="faq-category">
+            <div class="category-label">Working together</div>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Which companies are the best fit for Simono?</summary>
+                <div class="faq-answer">
+                  Simono is designed for B2B companies selling high-value
+                  services or software, particularly recruitment firms, IT
+                  consultancies, SaaS companies and specialist service
+                  businesses that need a more predictable way to reach
+                  decision-makers.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>What do you need from our team?</summary>
+                <div class="faq-answer">
+                  The most important inputs are access to commercial context, a
+                  clear understanding of the offer and timely feedback on
+                  replies and meetings. Simono handles the system and execution,
+                  while your team provides the expertise needed to sharpen
+                  targeting and qualification.
+                </div>
+              </details>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="contact-wrap">
+        <div class="container">
+          <h2 class="contact-title">
+            Still have a question?<span
+              >Let’s discuss your outbound system.</span
+            >
+          </h2>
+          <a
+            class="button"
+            href="https://cal.com/simon-lecat/build-your-outbound-system"
+            >Build your outbound system</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-v4">
+        <div class="footer-v4-main">
+          <div class="footer-v4-brand">
+            <a aria-label="Simono home" class="brand" href="../index.html"
+              ><span class="simono-v3-wordmark"
+                >Simon<span class="simono-v3-o">o</span></span
+              ></a
+            >
+            <p>
+              Outbound systems built to create more predictable B2B
+              conversations.
+            </p>
+          </div>
+          <div class="footer-v4-links">
+            <div>
+              <span>Explore</span><a href="../index.html#diagnosis">Diagnosis</a
+              ><a href="../index.html#method">Methodology</a
+              ><a href="../index.html#offer">Solutions</a
+              ><a href="../index.html#why">Why Simono</a
+              ><a href="../insights/index.html">Insights</a
+              ><a href="../faq/index.html">FAQ</a>
+            </div>
+            <div>
+              <span>Connect</span
+              ><a href="mailto:simon@simono.io?subject=Outbound%20Inquiry"
+                >Email</a
+              ><a
+                href="https://www.linkedin.com/in/simon-lecat/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >LinkedIn</a
+              ><a
+                href="https://cal.com/simon-lecat/build-your-outbound-system"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Book a call</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-v4-bottom">
+          <span>© 2026 Simono. All rights reserved.</span
+          ><span
+            >Based in Australia. Built for clarity, consistency and compounding
+            growth.</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
