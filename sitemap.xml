@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://simono.io/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://simono.io/insights/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simono.io/insights/build-the-system/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simono.io/insights/why-most-b2b-outbound-fails/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simono.io/insights/how-to-build-a-predictable-outbound-system/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simono.io/insights/cold-email-isnt-dead/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simono.io/faq/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url>
+    <loc>https://simono.io/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/faq/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/insights/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/insights/build-the-system/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/insights/why-most-b2b-outbound-fails/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/insights/how-to-build-a-predictable-outbound-system/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://simono.io/insights/cold-email-isnt-dead/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
