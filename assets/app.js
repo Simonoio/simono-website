@@ -122,3 +122,14 @@ document.addEventListener("click", function (event) {
     });
   }
 });
+
+document.querySelectorAll(".open-booking").forEach((button) => {
+  button.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "book_call_click", {
+        event_category: "conversion",
+        event_label: button.textContent.trim() || "Booking overlay",
+      });
+    }
+  });
+});
