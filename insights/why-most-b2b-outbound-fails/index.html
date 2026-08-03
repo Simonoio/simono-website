@@ -33,14 +33,22 @@
     </script>
 
     <meta charset="utf-8" />
-    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="../../favicon-32x32.png" sizes="32x32" type="image/png" />
-    <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
-    <link rel="manifest" href="../../manifest.webmanifest" />
-    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/simono-tab-icon.png"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <title>Why Most B2B Outbound Fails | Simono</title>
-    <meta name="description" content="The structural reasons B2B outbound underperforms—and how to replace fragmented activity with a connected operating system." />
+    <meta
+      name="description"
+      content="The structural reasons B2B outbound underperforms—and how to replace fragmented activity with a connected operating system."
+    />
     <link
       href="https://simono.io/insights/why-most-b2b-outbound-fails/"
       rel="canonical"
@@ -56,11 +64,20 @@
       content="https://simono.io/insights/why-most-b2b-outbound-fails/"
       property="og:url"
     />
-    <meta content="https://simono.io/assets/simono-og.png" property="og:image" />
+    <meta
+      content="https://simono.io/assets/simono-og.png"
+      property="og:image"
+    />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="Why Most B2B Outbound Fails | Simono" name="twitter:title" />
-    <meta content="The structural reasons B2B outbound underperforms—and how to replace fragmented activity with a connected operating system." name="twitter:description" />
-    <meta content="https://simono.io/assets/simono-og.png" name="twitter:image" />
+    <meta
+      content="The structural reasons B2B outbound underperforms—and how to replace fragmented activity with a connected operating system."
+      name="twitter:description"
+    />
+    <meta
+      content="https://simono.io/assets/simono-og.png"
+      name="twitter:image"
+    />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -472,9 +489,11 @@
           "Segoe UI",
           sans-serif !important;
       }
-    
+
       /* Simono brand lockup — final proportions */
-      .nav .brand, .footer-v4 .brand, .footer .brand {
+      .nav .brand,
+      .footer-v4 .brand,
+      .footer .brand {
         gap: 4px !important;
         display: inline-flex !important;
         align-items: center !important;
@@ -495,29 +514,59 @@
         color: #f7f7f4 !important;
         transform: translateY(-0.5px);
       }
-      .simono-v3-o { color: #00b5e2 !important; }
-      .footer-v4 .simono-v3-mark, .footer .simono-v3-mark {
+      .simono-v3-o {
+        color: #00b5e2 !important;
+      }
+      .footer-v4 .simono-v3-mark,
+      .footer .simono-v3-mark {
         width: 45px !important;
         height: 45px !important;
         flex-basis: 45px !important;
       }
-      .footer-v4 .simono-v3-wordmark, .footer .simono-v3-wordmark {
+      .footer-v4 .simono-v3-wordmark,
+      .footer .simono-v3-wordmark {
         font-size: 20px !important;
       }
       @media (max-width: 1050px) {
-        .simono-v3-mark { width: 47px !important; height: 47px !important; flex-basis: 47px !important; }
-        .simono-v3-wordmark { font-size: 21px !important; }
+        .simono-v3-mark {
+          width: 47px !important;
+          height: 47px !important;
+          flex-basis: 47px !important;
+        }
+        .simono-v3-wordmark {
+          font-size: 21px !important;
+        }
       }
       @media (max-width: 720px) {
-        .nav .brand, .footer-v4 .brand, .footer .brand { gap: 3px !important; }
-        .simono-v3-mark { width: 43px !important; height: 43px !important; flex-basis: 43px !important; }
-        .simono-v3-wordmark { font-size: 19px !important; }
-        .footer-v4 .simono-v3-mark, .footer .simono-v3-mark { width: 39px !important; height: 39px !important; flex-basis: 39px !important; }
-        .footer-v4 .simono-v3-wordmark, .footer .simono-v3-wordmark { font-size: 18px !important; }
+        .nav .brand,
+        .footer-v4 .brand,
+        .footer .brand {
+          gap: 3px !important;
+        }
+        .simono-v3-mark {
+          width: 43px !important;
+          height: 43px !important;
+          flex-basis: 43px !important;
+        }
+        .simono-v3-wordmark {
+          font-size: 19px !important;
+        }
+        .footer-v4 .simono-v3-mark,
+        .footer .simono-v3-mark {
+          width: 39px !important;
+          height: 39px !important;
+          flex-basis: 39px !important;
+        }
+        .footer-v4 .simono-v3-wordmark,
+        .footer .simono-v3-wordmark {
+          font-size: 18px !important;
+        }
       }
 
       /* Simono brand lockup — optically cropped and identical in nav/footer */
-      .nav .brand, .footer-v4 .brand, .footer .brand {
+      .nav .brand,
+      .footer-v4 .brand,
+      .footer .brand {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: flex-start !important;
@@ -547,19 +596,35 @@
         padding-left: 0 !important;
       }
       @media (max-width: 1050px) {
-        .simono-v3-mark, .footer-v4 .simono-v3-mark, .footer .simono-v3-mark {
-          width: 33px !important; height: 33px !important; flex-basis: 33px !important;
+        .simono-v3-mark,
+        .footer-v4 .simono-v3-mark,
+        .footer .simono-v3-mark {
+          width: 33px !important;
+          height: 33px !important;
+          flex-basis: 33px !important;
         }
-        .simono-v3-wordmark, .footer-v4 .simono-v3-wordmark, .footer .simono-v3-wordmark {
+        .simono-v3-wordmark,
+        .footer-v4 .simono-v3-wordmark,
+        .footer .simono-v3-wordmark {
           font-size: 21px !important;
         }
       }
       @media (max-width: 720px) {
-        .nav .brand, .footer-v4 .brand, .footer .brand { gap: 4px !important; }
-        .simono-v3-mark, .footer-v4 .simono-v3-mark, .footer .simono-v3-mark {
-          width: 30px !important; height: 30px !important; flex-basis: 30px !important;
+        .nav .brand,
+        .footer-v4 .brand,
+        .footer .brand {
+          gap: 4px !important;
         }
-        .simono-v3-wordmark, .footer-v4 .simono-v3-wordmark, .footer .simono-v3-wordmark {
+        .simono-v3-mark,
+        .footer-v4 .simono-v3-mark,
+        .footer .simono-v3-mark {
+          width: 30px !important;
+          height: 30px !important;
+          flex-basis: 30px !important;
+        }
+        .simono-v3-wordmark,
+        .footer-v4 .simono-v3-wordmark,
+        .footer .simono-v3-wordmark {
           font-size: 19px !important;
         }
       }
@@ -577,12 +642,22 @@
           font-size: 0.8125rem;
         }
       }
-</style>
+    </style>
   </head>
   <body>
     <header class="nav">
       <div class="container navin">
-        <a aria-label="Simono home" class="brand" href="../../index.html"><img alt="" aria-hidden="true" class="simono-v3-mark" decoding="async" src="../../assets/simono-mark.svg?v=8" /><span class="simono-v3-wordmark">Simon<span class="simono-v3-o">o</span></span></a>
+        <a aria-label="Simono home" class="brand" href="../../index.html"
+          ><img
+            alt=""
+            aria-hidden="true"
+            class="simono-v3-mark"
+            decoding="async"
+            src="../../assets/simono-mark.svg?v=8"
+          /><span class="simono-v3-wordmark"
+            >Simon<span class="simono-v3-o">o</span></span
+          ></a
+        >
         ><a class="back" href="../index.html">Back to Insights</a>
       </div>
     </header>
@@ -745,12 +820,19 @@
         <div class="footer-v4-main">
           <div class="footer-v4-brand">
             <a aria-label="Simono home" class="brand" href="../../index.html"
-              ><img alt="" aria-hidden="true" class="simono-v3-mark" decoding="async" src="../../assets/simono-mark.svg?v=8" /><span class="simono-v3-wordmark"
+              ><img
+                alt=""
+                aria-hidden="true"
+                class="simono-v3-mark"
+                decoding="async"
+                src="../../assets/simono-mark.svg?v=8"
+              /><span class="simono-v3-wordmark"
                 >Simon<span class="simono-v3-o">o</span></span
               ></a
             >
             <p class="footer-tagline">
-              Outbound systems built to create more predictable B2B conversations.
+              Outbound systems built to create more predictable B2B
+              conversations.
             </p>
           </div>
           <div class="footer-v4-links">
