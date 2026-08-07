@@ -84,7 +84,7 @@
     banner.id="simono-cookie-banner";
     banner.setAttribute("role","dialog");
     banner.setAttribute("aria-label","Cookie consent");
-    banner.innerHTML=`<div class="scb-row"><p>We use optional analytics cookies to understand how the website performs. You can accept, decline or customise your preferences. Read our <a href="/privacy-policy.html">Privacy Policy</a>.</p><div class="sc-actions"><button class="sc-btn sc-btn-secondary" type="button" data-sc-customise>Customise</button><button class="sc-btn sc-btn-secondary" type="button" data-sc-reject>Reject</button><button class="sc-btn sc-btn-primary" type="button" data-sc-accept>Accept analytics</button></div></div>`;
+    banner.innerHTML=`<div class="scb-row"><p>We use optional analytics cookies to understand how the website performs. You can accept, decline or customise your preferences. Read our <a href="/privacy-policy">Privacy Policy</a>.</p><div class="sc-actions"><button class="sc-btn sc-btn-secondary" type="button" data-sc-customise>Customise</button><button class="sc-btn sc-btn-secondary" type="button" data-sc-reject>Reject</button><button class="sc-btn sc-btn-primary" type="button" data-sc-accept>Accept analytics</button></div></div>`;
     document.body.appendChild(banner);
     banner.querySelector("[data-sc-customise]").onclick=openPreferences;
     banner.querySelector("[data-sc-reject]").onclick=()=>setPrefs(false);
