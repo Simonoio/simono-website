@@ -125,6 +125,17 @@
   document
     .querySelectorAll(".open-booking")
     .forEach((el) => el.addEventListener("click", openBooking));
+
+  // Open the booking overlay when a CTA on another page links to #booking.
+  if (window.location.hash === "#booking") {
+    openBooking();
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${window.location.search}`,
+    );
+  }
+
   close?.addEventListener("click", closeBooking);
   back?.addEventListener("click", (event) => {
     event.preventDefault();

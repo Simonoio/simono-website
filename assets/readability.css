@@ -1,0 +1,211 @@
+/* Shared reading rhythm across Simono pages. */
+:root {
+  --content-measure: 740px;
+  --reading-measure: 720px;
+  --section-space: clamp(88px, 10vw, 140px);
+  --section-space-compact: clamp(40px, 5vw, 64px);
+}
+
+.section,
+.contact-wrap {
+  padding-top: var(--section-space) !important;
+  padding-bottom: var(--section-space) !important;
+}
+
+.section-head {
+  margin-bottom: clamp(42px, 5vw, 64px) !important;
+}
+
+.title,
+.contact-title {
+  max-width: 1040px;
+  text-wrap: balance;
+}
+
+.intro,
+.hero-lead {
+  max-width: var(--content-measure) !important;
+  line-height: 1.7 !important;
+  text-wrap: pretty;
+}
+
+.title + .intro,
+.reveal > .title + .intro {
+  margin-top: clamp(22px, 2.5vw, 30px) !important;
+}
+
+.faq-hero {
+  min-height: clamp(560px, 72vh, 650px) !important;
+}
+
+.faq-section,
+.legal-section {
+  padding-top: var(--section-space-compact) !important;
+  padding-bottom: var(--section-space) !important;
+}
+
+.faq-shell,
+.legal-shell {
+  max-width: 980px !important;
+}
+
+.faq-category,
+.legal-category {
+  padding-top: clamp(42px, 5vw, 56px) !important;
+  padding-bottom: clamp(42px, 5vw, 56px) !important;
+}
+
+.faq-answer,
+.legal-copy,
+.article {
+  text-wrap: pretty;
+}
+
+.legal-copy {
+  max-width: var(--reading-measure) !important;
+}
+
+.legal-copy p,
+.article p {
+  line-height: 1.78 !important;
+}
+
+.article {
+  width: min(var(--reading-measure), calc(100% - 48px)) !important;
+  padding-top: clamp(64px, 8vw, 88px) !important;
+  padding-bottom: var(--section-space) !important;
+}
+
+.article h2 {
+  margin-top: clamp(50px, 7vw, 66px) !important;
+  margin-bottom: 18px !important;
+  text-wrap: balance;
+}
+
+.article h3 {
+  margin-top: 38px !important;
+  margin-bottom: 14px !important;
+}
+
+/* Tighter editorial relationship between the article label and headline. */
+.hero > .container > .eyebrow + h1 {
+  margin-top: 24px !important;
+}
+
+/* More breathing room through the homepage hero composition. */
+#top > .hero:not(.insights-page-hero) .hero-pill {
+  margin-bottom: clamp(38px, 4.6vh, 50px) !important;
+}
+
+#top > .hero:not(.insights-page-hero) h1 span {
+  margin-top: 0.1em !important;
+}
+
+#top > .hero:not(.insights-page-hero) .hero-lead {
+  margin-top: clamp(40px, 4.8vh, 52px) !important;
+}
+
+#top > .hero:not(.insights-page-hero) .hero-actions {
+  margin-top: clamp(36px, 4.2vh, 46px) !important;
+}
+
+/* Insights index: same calm, editorial transition as FAQ and legal pages. */
+.hero.insights-page-hero {
+  min-height: clamp(610px, 72vh, 680px) !important;
+  padding: 132px 0 72px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.hero.insights-page-hero > .container {
+  min-height: 0 !important;
+  display: block !important;
+}
+
+.insights-page-hero .hero-core-final {
+  max-width: 1000px !important;
+  padding: 0 !important;
+}
+
+.insights-page-hero .hero-pill {
+  margin: 0 auto 26px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+
+.insights-page-hero .hero-pill i {
+  display: none !important;
+}
+
+.hero.insights-page-hero h1 {
+  max-width: 1000px !important;
+  font-size: clamp(3.6rem, 7vw, 7.2rem) !important;
+  line-height: 0.94 !important;
+}
+
+.insights-page-hero .hero-lead {
+  margin-top: 30px !important;
+}
+
+.insights-page-hero .hero-actions {
+  margin-top: 32px !important;
+}
+
+#insights.section {
+  padding-top: var(--section-space-compact) !important;
+}
+
+@media (min-width: 1051px) {
+  .insights-page-hero + #insights {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --section-space: 88px;
+    --section-space-compact: 40px;
+  }
+
+  .section-head {
+    margin-bottom: 38px !important;
+  }
+
+  .faq-hero {
+    min-height: 520px !important;
+  }
+
+  .hero.insights-page-hero {
+    min-height: 560px !important;
+    padding: 112px 0 64px !important;
+  }
+
+  .hero.insights-page-hero h1 {
+    font-size: clamp(3.1rem, 14vw, 5rem) !important;
+  }
+
+  #top > .hero:not(.insights-page-hero) .hero-pill {
+    margin-bottom: 30px !important;
+  }
+
+  #top > .hero:not(.insights-page-hero) .hero-lead {
+    margin-top: 32px !important;
+  }
+
+  #top > .hero:not(.insights-page-hero) .hero-actions {
+    margin-top: 30px !important;
+  }
+
+  .faq-category,
+  .legal-category {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .article {
+    width: calc(100% - 28px) !important;
+  }
+}
