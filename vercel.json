@@ -19,5 +19,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    }
   ]
 }
