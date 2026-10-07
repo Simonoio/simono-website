@@ -27,7 +27,7 @@
       "statusCode": 301
     },
     {
-      "source": "/insights/cold-email-isnt-dead/:path*",
+      "source": "/insights/cold-email-isnt-dead/",
       "destination": "/insights/responsible-b2b-outbound-australia/",
       "statusCode": 301
     },
