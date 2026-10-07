@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://simono.io/sitemap.xml
+Sitemap: https://www.simono.io/sitemap.xml
