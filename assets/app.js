@@ -18,7 +18,7 @@
     build: {
       title: "Build your outbound system with Simono",
       subtitle:
-        "Design the foundations of a predictable outbound engine for your Cybersecurity, Cloud or Data business. We'll review your goals, ideal customers, messaging and the infrastructure needed to launch with clarity.",
+        "Design the foundations of a predictable outbound engine for your cyber security firm. We'll review your goals, ideal customers, messaging and the infrastructure needed to launch with clarity.",
       reassuranceTitle: "No sales pressure.",
       reassuranceText:
         "We'll explore how to build the right outbound foundation for your business and determine whether Simono is the right partner.",

@@ -32,13 +32,13 @@
       <div class="nav-approach">
         <button class="nav-approach-toggle" type="button" aria-expanded="false">Approach</button>
         <div class="nav-approach-menu">
-          <a href="${paths.diagnosis}">Diagnosis</a>
-          <a href="${paths.method}">Methodology</a>
+          <a href="${paths.diagnosis}">The problem</a>
+          <a href="${paths.method}">How it works</a>
           <a href="${paths.framework}">Framework</a>
           <a href="${paths.why}">Why Simono</a>
         </div>
       </div>
-      <a href="${paths.solutions}">Solutions</a>
+      <a href="${paths.solutions}">Services</a>
       <a href="${paths.insights}" data-nav-section="insights">Insights</a>
       <a href="${paths.contact}">Contact</a>
     `;
