@@ -85,7 +85,7 @@
     calLoaded = true;
     const iframe = document.createElement("iframe");
     iframe.src =
-      "https://cal.com/simon-lecat/build-your-outbound-system?embed=true&theme=dark";
+      "https://cal.com/simon-lecat/intro-call?embed=true&theme=dark";
     iframe.title = "Book a 30-minute conversation with Simono";
     iframe.loading = "lazy";
     iframe.style.cssText =
