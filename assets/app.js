@@ -16,15 +16,15 @@
 
   const bookingContent = {
     build: {
-      title: "Build your outbound system with Simono",
+      title: "Book a call with Simon",
       subtitle:
-        "Design the foundations of a predictable outbound engine for your cyber security firm. We'll review your goals, ideal customers, messaging and the infrastructure needed to launch with clarity.",
+        "A focused 30-minute conversation about your services, your ideal clients and your pipeline, and whether Simono is the right fit to book meetings for you.",
       reassuranceTitle: "No sales pressure.",
       reassuranceText:
-        "We'll explore how to build the right outbound foundation for your business and determine whether Simono is the right partner.",
+        "No obligation. Just a focused conversation to understand your business and explore whether Simono can help.",
     },
     scale: {
-      title: "Scale your outbound system with Simono",
+      title: "Book a call with Simon",
       subtitle:
         "Review your current outbound engine, identify growth bottlenecks and uncover opportunities to generate more qualified conversations. We'll focus on what is already working and where the greatest improvements can be made.",
       reassuranceTitle: "Bring your current outbound strategy.",
@@ -32,7 +32,7 @@
         "We'll review your targeting, messaging, deliverability, campaign performance and meeting quality to identify the highest-impact opportunities for growth.",
     },
     default: {
-      title: "Build your outbound system with Simono",
+      title: "Book a call with Simon",
       subtitle:
         "Book a focused 30-minute conversation to review your goals, identify the highest-impact opportunities and determine whether Simono is the right partner.",
       reassuranceTitle: "No sales pressure.",
