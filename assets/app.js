@@ -32,12 +32,12 @@
         "We'll review your targeting, messaging, deliverability, campaign performance and meeting quality to identify the highest-impact opportunities for growth.",
     },
     default: {
-      title: "Book a call with Simon",
+      title: "Book your free audit",
       subtitle:
-        "Book a focused 30-minute conversation to review your goals, identify the highest-impact opportunities and determine whether Simono is the right partner.",
-      reassuranceTitle: "No sales pressure.",
+        "A free 30-minute call about your services and ideal clients, plus 5 target accounts in your market.",
+      reassuranceTitle: "Free, no obligation.",
       reassuranceText:
-        "No obligation. Just a focused conversation to understand your business and explore whether Simono can help.",
+        "If it's a fit, you only pay for qualified meetings that happen. Your first meeting is free.",
     },
   };
 
@@ -85,8 +85,8 @@
     calLoaded = true;
     const iframe = document.createElement("iframe");
     iframe.src =
-      "https://cal.com/simon-lecat/intro-call?embed=true&theme=dark";
-    iframe.title = "Book a 30-minute conversation with Simono";
+      "https://cal.com/simon-lecat/free-audit?embed=true&theme=dark";
+    iframe.title = "Book your free 30-minute audit with Simono";
     iframe.loading = "lazy";
     iframe.style.cssText =
       "width:100%;min-height:700px;border:0;background:#151515;";
