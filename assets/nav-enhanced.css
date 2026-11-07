@@ -1,0 +1,182 @@
+/* Simono floating navigation — shared across every page. */
+.nav {
+  background: linear-gradient(180deg, rgba(9, 9, 9, 0.92), rgba(9, 9, 9, 0.72)) !important;
+  border-bottom-color: transparent !important;
+  backdrop-filter: blur(20px) saturate(135%) !important;
+}
+
+.nav-inner {
+  grid-template-columns: 220px minmax(0, 1fr) 220px !important;
+  gap: 20px !important;
+}
+
+.nav-links.nav-enhanced {
+  position: relative;
+  justify-self: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: max-content !important;
+  gap: 3px !important;
+  padding: 5px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24) !important;
+}
+
+.nav-links.nav-enhanced > a,
+.nav-approach-toggle {
+  min-height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px;
+  padding: 0 15px !important;
+  border: 0;
+  border-radius: 999px !important;
+  background: transparent;
+  color: var(--muted) !important;
+  font: 500 0.82rem "Geist", sans-serif;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease !important;
+}
+
+.nav-links.nav-enhanced > a:hover,
+.nav-links.nav-enhanced > a:focus-visible,
+.nav-approach-toggle:hover,
+.nav-approach-toggle:focus-visible,
+.nav-links.nav-enhanced > a.is-active,
+.nav-approach.is-active > .nav-approach-toggle {
+  color: var(--text) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+.nav-links.nav-enhanced > a.is-active::before,
+.nav-approach.is-active > .nav-approach-toggle::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 181, 226, 0.8);
+}
+
+.nav-approach {
+  position: relative;
+}
+
+.nav-approach-toggle::after {
+  content: "⌄";
+  color: var(--muted-2, #6c6c67);
+  font-size: 0.85rem;
+  transform: translateY(-1px);
+}
+
+.nav-approach-menu {
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 0;
+  z-index: 20;
+  display: grid;
+  min-width: 220px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  background: rgba(14, 14, 14, 0.98);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.48);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-7px);
+  transition: 0.2s ease;
+}
+
+.nav-approach.is-open .nav-approach-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-approach-menu a {
+  display: flex !important;
+  align-items: center;
+  min-height: 42px !important;
+  padding: 0 12px !important;
+  border-radius: 10px;
+  color: var(--muted) !important;
+  font-size: 0.86rem !important;
+}
+
+.nav-approach-menu a:hover,
+.nav-approach-menu a:focus-visible {
+  color: var(--text) !important;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-inner > .nav-conversation {
+  justify-self: end !important;
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  white-space: nowrap;
+}
+
+.nav.nav-compact .nav-inner {
+  min-height: 62px !important;
+}
+
+@media (max-width: 1050px) {
+  .nav-inner {
+    grid-template-columns: auto 1fr auto !important;
+  }
+
+  .nav-inner > .nav-conversation {
+    display: none !important;
+  }
+
+  .nav-links.nav-enhanced {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 14px !important;
+    right: 14px !important;
+    width: auto !important;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 10px !important;
+    border-radius: 18px !important;
+    background: rgba(14, 14, 14, 0.98) !important;
+  }
+
+  .nav-links.nav-enhanced.is-open,
+  .nav-links.nav-enhanced.mobile-open {
+    display: flex !important;
+  }
+
+  .nav-links.nav-enhanced > a,
+  .nav-approach-toggle {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: space-between !important;
+    border-radius: 11px !important;
+  }
+
+  .nav-approach-menu {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 3px 0 6px;
+    padding: 5px 8px;
+    border: 0;
+    border-left: 1px solid rgba(0, 181, 226, 0.28);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-approach.is-open .nav-approach-menu {
+    display: grid;
+  }
+}
