@@ -6,60 +6,20 @@
     const links = document.getElementById("primary-navigation");
     const menu = nav?.querySelector(".menu");
     const brand = nav?.querySelector(".brand");
-    const cta = nav?.querySelector(".nav-inner > a.button");
-    if (!nav || !links || !menu || !brand || !cta) return;
+    if (!nav || !links || !menu || !brand) return;
 
     const home = new URL(brand.getAttribute("href") || "/", window.location.href);
     home.hash = "";
     const homeLink = (hash) => `${home.href}#${hash}`;
-    const findHref = (label, fallback) =>
-      [...links.querySelectorAll("a")].find((link) =>
-        link.textContent.trim().toLowerCase().includes(label.toLowerCase()),
-      )?.href || fallback;
-
-    const paths = {
-      diagnosis: homeLink("diagnosis"),
-      method: homeLink("method"),
-      framework: homeLink("framework"),
-      why: homeLink("why"),
-      solutions: findHref("Solutions", homeLink("offer")),
-      insights: findHref("Insights", homeLink("insights")),
-      contact: findHref("Contact", homeLink("contact")),
-    };
 
     links.classList.add("nav-enhanced");
     links.innerHTML = `
-      <div class="nav-approach">
-        <button class="nav-approach-toggle" type="button" aria-expanded="false">Approach</button>
-        <div class="nav-approach-menu">
-          <a href="${paths.diagnosis}">The problem</a>
-          <a href="${paths.method}">How it works</a>
-          <a href="${paths.framework}">Framework</a>
-          <a href="${paths.why}">Why Simono</a>
-        </div>
-      </div>
-      <a href="${paths.solutions}">Services</a>
-      <a href="${paths.insights}" data-nav-section="insights">Insights</a>
-      <a href="${paths.contact}">Contact</a>
+      <a href="${homeLink("method")}">How it works</a>
+      <a href="${homeLink("offer")}">Pricing</a>
+      <a href="${homeLink("why")}">About</a>
+      <a href="/insights/" data-nav-section="insights">Insights</a>
+      <a href="${homeLink("contact")}">Contact</a>
     `;
-
-    cta.textContent = "Start a conversation";
-    cta.href = paths.contact;
-    cta.classList.remove("open-booking");
-    cta.classList.add("nav-conversation");
-    cta.removeAttribute("data-booking-type");
-
-    const approach = links.querySelector(".nav-approach");
-    const approachToggle = links.querySelector(".nav-approach-toggle");
-    const setApproach = (open) => {
-      approach.classList.toggle("is-open", open);
-      approachToggle.setAttribute("aria-expanded", String(open));
-    };
-
-    approachToggle.addEventListener("click", (event) => {
-      event.stopPropagation();
-      setApproach(!approach.classList.contains("is-open"));
-    });
 
     menu.addEventListener(
       "click",
@@ -70,7 +30,6 @@
         links.classList.toggle("is-open", open);
         links.classList.remove("mobile-open");
         menu.setAttribute("aria-expanded", String(open));
-        if (!open) setApproach(false);
       },
       true,
     );
@@ -79,11 +38,9 @@
       if (!event.target.closest("a")) return;
       links.classList.remove("is-open", "mobile-open");
       menu.setAttribute("aria-expanded", "false");
-      setApproach(false);
     });
 
     document.addEventListener("click", (event) => {
-      if (!approach.contains(event.target)) setApproach(false);
       if (!nav.contains(event.target)) {
         links.classList.remove("is-open", "mobile-open");
         menu.setAttribute("aria-expanded", "false");
@@ -92,8 +49,6 @@
 
     if (window.location.pathname.includes("/insights")) {
       links.querySelector('[data-nav-section="insights"]')?.classList.add("is-active");
-    } else if (["diagnosis", "method", "framework", "why"].includes(window.location.hash.slice(1))) {
-      approach.classList.add("is-active");
     }
 
     const compact = () => nav.classList.toggle("nav-compact", window.scrollY > 36);
